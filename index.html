@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Larry Smith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<body>
+
+<div class="subscribe-overlay" id="subscribeOverlay" aria-hidden="true">
+  <div class="subscribe-modal" role="dialog" aria-labelledby="subscribeTitle">
+    <button class="subscribe-close" aria-label="Close">&times;</button>
+
+    <h2 id="subscribeTitle" data-gold>Join the Newsletter</h2>
+    <p>Get updates, releases, and news directly in your inbox.</p>
+
+    <form id="newsletterForm">
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email address"
+        required
+      >
+      <button type="submit" data-gold>Subscribe</button>
+      <p class="form-message" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+
+
+
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+<!-- Dark overlay (click to close menu) -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- Mobile top strip with hamburger (visible only on mobile) -->
+<header class="mobile-header">
+  <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="60" id="mobileHamburger">
+    <path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+    <path class="line middle" d="m 30,50 h 40" />
+    <path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+  </svg>
+</header>
+
+
+<!-- Mobile off-canvas menu (links at the top) -->
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" aria-label="Close menu">
+    <i class="ri-close-line"></i>
+  </button>
+  <ul>
+    <li><a href="biography.html" data-gold>Biography</a></li>
+    <li><a href="news.html" data-gold>News</a></li>
+    <li><a href="bands.projects.html" data-gold>Bands</a></li>
+    <li><a href="music.videos.html" data-gold>Music and Videos</a></li>
+    <li><a href="store.html" data-gold>Store</a></li>
+  </ul>
+</nav>
+
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="wrap">
+    <div class="mainimage">
+      <div class="profile-container">
+        <a href="#biography">
+          <img src="web_assets/images/hero_image.jpg" alt="Larry Smith">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Main Navigation -->
+<header class="under-hero">
+  <div class="wrap">
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <a href="biography.html" data-gold>Biography</a>
+      <a href="news.html" data-gold>News</a>
+      <a href="bands.projects.html" data-gold>Bands</a>
+      <a href="music.videos.html" data-gold>Music and Videos</a>
+      <a href="store.html" data-gold>Store</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Social Buttons -->
+<div class="social-buttons">
+  <a href="https://facebook.com/larrysmithes" aria-label="Facebook"><span data-silver class="ri-facebook-fill"></span></a>
+  <a href="https://instagram.com/larrysmithmusic" aria-label="Instagram"><span data-silver class="ri-instagram-fill"></span></a>
+  <a href="https://x.com/larry_smith_25" aria-label="X"><span data-silver class="ri-twitter-x-fill"></span></a>
+  <a href="https://youtube.com/@LarrySmithMusic" aria-label="YouTube"><span data-silver class="ri-youtube-fill"></span></a>
+  <a href="https://myspace.com/larrysmithes" aria-label="Myspace"><span data-silver class="ri-team-fill"></span></a>
+</div>
+
+<!-- Subscribe Widget -->
+<main class="wrap">
+  <aside>
+    <div class="widget subscribe">
+      <button data-gold id="openSubscribe">Subscribe</button>
+    </div>
+  </aside>
+</main>
+
+<!-- Stranger Things–Style Cards Section -->
+<section class="wrap">
+  <h2 data-gold style="text-align:center">News</h2>
+  <div class="content-wrapper">
+
+    <!-- News Cards -->
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="web_assets/images/flyer_01.png" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h3 class="news-card__title">Amazing First Title</h3>
+        <div class="news-card__post-date">Jan 29, 2018</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio, pariatur…</p>
+          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="web_assets/images/flyer_05.png" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h3 class="news-card__title">Amazing Second Title that is Quite Long</h3>
+        <div class="news-card__post-date">Jan 29, 2018</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati ex natus nulla rem sequi laborum quod fugit…</p>
+          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="web_assets/images/flyer_04.png" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h3 class="news-card__title">Amazing Title</h3>
+        <div class="news-card__post-date">Jan 29, 2018</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae…</p>
+          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="web_assets/images/flyer_06.png" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h3 class="news-card__title">Amazing Fourth Title that is Quite Long</h3>
+        <div class="news-card__post-date">Jan 29, 2018</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet!</p>
+          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="web_assets/images/flyer_07.png" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h3 class="news-card__title">Amazing Fifth Title</h3>
+        <div class="news-card__post-date">Jan 29, 2018</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio…</p>
+          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="web_assets/images/flyer_08.png" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h3 class="news-card__title">Amazing 6<sup>th</sup> Title</h3>
+        <div class="news-card__post-date">Jan 29, 2018</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia.</p>
+          <a href="/home/computer/Desktop/Code/Larry_Smith_web_proper/website_structured/web_assets/Larry_flyer_08.png" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Biography Section -->
+<section id="biography" class="bio">
+  <h2 data-gold>Biography</h2>
+  <p>
+    If you don't know the Blues, there's no point in even picking up a guitar. An Award winning guitarist (and multi instrumentalist) Larry Smith comes with a warning: Watch out! He plays Blues/Rock that bites back! .
+Half British and half American, Larry came of age in the 60's, when Rock propelled music and popular culture into a consciousness that continues to be a major influence two generations later.
+ Chuck Berry famously said, "It used to be called Boogie-Woogie, it used to be called Blues, used to be called Rhythm and Blues. It's called Rock now."  Living in London in 1967, he heard Jimmy Hendrix on pirate radio and was inspired to learn guitar. This opened the door to the influences of The Yardbirds, John Mayall, The Rolling Stones, Frank Zappa, Robert Johnson, Lightnin’ Hopkins, Bo Diddley and many others.
+In a career that spans both sides of the Atlantic and over 3,500 gigs. His shows are riveting because he knows exactly how to unharness a performance in the moment. He effortlessly blends powerful guitar playing with an expressive vocal style to shape his signature sound. a mix of Rory Gallagher, Jimi Hendrix and Stevie Ray with a dash of Richie Blackmore. He consistently brings a new edge to performances and balances his playing with a technical excellence that comes only from a lifetime devoted to music.
+He has worked with members of AC/DC, Manfred Mann, Deep Purple, Dio, Rainbow, The Blues Band, Thin Lizzy, Home, Wings, The Who, Marcus Malone, Cozy Powell, and also many sessions.
+After years on the road, Larry finally took a break from music and the music business and moved to Spain. It wasn't long before Larry started performing again in and around Barcelona and began making his mark on the local scene with his fantastic guitar playing. He is currently recording new music with a newly formed classic blues/rock trio, Larry Smith and Unfinished Business. A diverse and accomplished musician who also plays slide guitar, bass, mandolin, banjo and trumpet, Larry is also a composer/writer, live and studio engineer and actor.
+  </p>
+</section>
+
+<!-- Thumbnail Cards Section -->
+<section class="wrap" id="bands">
+  <h2 data-gold>Bands</h2>
+  <div class="cards">
+    <a href="unfinished_business.html">
+      <div class="thumb">
+        <h3 data-gold>Upcoming Dates</h3>
+        <img src="web_assets/images/logo_unfinished.jpg" alt="">
+      </div>
+    </a>
+    <a href="ascencial_band.html">
+      <div class="thumb">
+        <h3 data-gold>Upcoming Dates</h3>
+        <img src="web_assets/images/logo_ascencial.jpeg" alt="">
+      </div>
+    </a>
+    <a href="dangeroux_duo.html">
+      <div class="thumb">
+        <h3 data-gold>Upcoming Dates</h3>
+        <img src="web_assets/images/logo_dangeroux.jpg" alt="">
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Store Section -->
+<section class="wrap">
+  <div id="store" class="store-wrapper">
+    <h2 data-gold style="text-align:center;margin:4rem 0 2rem">Store</h2>
+    <div class="store-grid teaser" id="storeGrid">
+
+      <div class="store-item">
+        <img src="" alt="Vinyl">
+        <h3 data-gold>Skull with Gems and Gold</h3>
+        <p class="price">$35</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now</a>
+      </div>
+
+      <div class="store-item">
+        <img src="" alt="Poster">
+        <h3 data-gold>Skull with gems and gold with leaf</h3>
+        <p class="price">$25</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now</a>
+      </div>
+
+      <div class="store-item">
+        <img src="" alt="T-Shirt">
+        <h3 data-gold>Skull made out of meteorite and quartz</h3>
+        <p class="price">$30</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now</a>
+      </div>
+<div class="store-item">
+        <img src="" alt="Vinyl">
+        <h3 data-gold>LP signed by Larry Smith</h3>
+        <p class="price">$35</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now</a>
+      </div>
+
+      <div class="store-item">
+        <img src="" alt="Poster">
+        <h3 data-gold>Condom-shaped Lava Lamp Larry</h3>
+        <p class="price">$25</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now</a>
+      </div>
+
+      <div class="store-item">
+        <img src="" alt="T-Shirt">
+        <h3 data-gold>Gimp mask</h3>
+        <p class="price">$30</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now</a>
+      </div>
+<div class="store-item">
+        <img src="" alt="Vinyl">
+        <h3 data-gold>Pikey tears - 100 Doses</h3>
+        <p class="price">$35</p>
+        <a href="#" class="buy-btn" data-gold>Limited edition (300M units)</a>
+      </div>
+
+      <div class="store-item">
+        <img src="" alt="Poster">
+        <h3 data-gold>T'shirt "Lords of Rock'n Roll"</h3>
+        <p class="price">$25</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now last units!</a>
+      </div>
+
+      <div class="store-item">
+        <img src="" alt="T-Shirt">
+        <h3 data-gold>Beermug "Kinga'sa da Swingga!"</h3>
+        <p class="price">$30</p>
+        <a href="#" class="buy-btn" data-gold>Buy Now or Repent laters!</a>
+      </div>
+
+      <div class="expand-overlay">
+        <button class="expand-btn" id="expandBtn" aria-expanded="false">See all products</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Media Player Section -->
+<div class="wrap">
+  
+  <div class="widget media" aria-label="Now playing">
+    <h2 data-gold style="text-align: center;">Listen to Larry's music!</h2>
+    <div class="media-player">
+      <div class="media-frame">
+        <div class="media-info">
+          <div class="media-title" data-gold>Now Playing</div>
+          <div class="media-subtitle">No track loaded</div>
+        </div>
+        <div class="media-controls">
+          <button class="mp-btn mp-prev" aria-label="Previous">Prev</button>
+          <button class="mp-btn mp-play" aria-label="Play/Pause">Play</button>
+          <button class="mp-btn mp-next" aria-label="Next">Next</button>
+        </div>
+        <div class="media-progress" aria-hidden="true">
+          <div class="media-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio id="uplink-audio" preload="metadata"></audio>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div data-gold>© 2025 Larry Smith</div>
+    <div data-gold>Privacy · Terms</div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
+
