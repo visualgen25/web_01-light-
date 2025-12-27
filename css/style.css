@@ -46,6 +46,11 @@ html, body {
   pointer-events: none;
 }
 
+/* Line responsible for gold text to be visible over the background */
+section h2 {
+  position: relative;
+}
+
 /* ============================================================
    3. SHARED METALLIC CARD SYSTEM
 ============================================================ */
